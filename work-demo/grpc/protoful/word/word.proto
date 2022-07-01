@@ -1,0 +1,29 @@
+syntax = "proto3"; // 指定protobuf的版本
+
+package word;
+
+// 路径取当前文件目录
+option go_package = "../word";
+
+//protoc --go_out=plugins=grpc:. ./word.proto
+
+
+// define a service
+// 定义服务
+service HelloWorldService {
+  // define the interface and data type
+  // 定义接口和数据类型
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// define the data type of request
+// 定义请求的数据类型
+message HelloRequest {
+  string name = 1;
+}
+
+// define the data type of response
+// 定义响应的数据类型
+message HelloReply {
+  string message = 1;
+}
