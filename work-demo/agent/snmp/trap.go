@@ -89,7 +89,6 @@ func myTrapHandler(packet *gosnmp.SnmpPacket, addr *net.UDPAddr) {
 }
 
 func TrapSendTransfer(metric []*MetricValue) {
-	// url := global.GlobalCfg.DataServiceIp + ":" + strconv.Itoa(global.GlobalCfg.DataServicePort) + "/api/push"
 	url := "http://172.31.0.151:6060" + "/api/push"
 	header := make(http.Header)
 	header.Set("Content-Type", "application/json; charset=UTF-8")
