@@ -1,4 +1,4 @@
-package demo
+package ping
 
 import (
 	"bytes"

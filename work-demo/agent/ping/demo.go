@@ -1,4 +1,4 @@
-package demo
+package ping
 
 import (
 	"fmt"
@@ -14,8 +14,6 @@ func ReadableSize() {
 		return
 	}
 	ip := "58.37.2.34"
-	//ip := "49.234.72.129"
-	//ip := "49.234.72.129"
 	results, err := db.Get_all(ip)
 
 	if err != nil {
